@@ -3,12 +3,7 @@ dsa questions with answers
 
 A comprehensive, interactive web-based guide covering the most important LeetCode problems for technical interviews. This repository contains complete solutions with detailed explanations, optimized code, and complexity analysis for all 150+ problems.
 
-## 📋 Table of Contents
 
-- [Features](#features)
-- [Problem Categories](#problem-categories)
-
-## ✨ Features
 
 ### 🎨 **Interactive Web Interface**
 
