@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Top 150 - Complete Interview Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</he    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="problems-database.js"></script>
+    <script src="enhanced-script.js"></script>
+    
+    <!-- Initialize syntax highlighting after content loads -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Re-highlight code when new content is added
+            const observer = new MutationObserver(() => {
+                if (typeof Prism !== 'undefined') {
+                    Prism.highlightAll();
+                }
+            });
+            
+            observer.observe(document.body, { 
+                childList: true, 
+                subtree: true 
+            });
+        });
+    </script>
+</body>
+</html><body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <h1 class="logo">LeetCode Top 150</h1>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#overview" class="nav-link">Overview</a></li>
+                    <li><a href="#topics" class="nav-link">Topics</a></li>
+                    <li><a href="#problems" class="nav-link">Problems</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Master LeetCode Top 150</h1>
+                    <p class="hero-subtitle">Complete Interview Preparation Guide with Solutions, Explanations & Optimizations</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Problems Covered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Topic Categories</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Java</span>
+                            <span class="stat-label">Solutions</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#topics" class="btn btn-primary">Start Learning</a>
+                        <a href="#overview" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="overview">
+            <div class="container">
+                <h2 class="section-title">Why This Guide?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Comprehensive Coverage</h3>
+                        <p>All essential data structures and algorithms problems covered systematically</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Optimized Solutions</h3>
+                        <p>Both brute force and optimized approaches with time/space complexity analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Topic-wise Organization</h3>
+                        <p>Problems organized by topics for structured learning and easy navigation</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>Detailed Explanations</h3>
+                        <p>Clear approach explanations and multiple solution techniques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="topics" class="topics">
+            <div class="container">
+                <h2 class="section-title">Topics Covered</h2>
+                <div class="topics-grid">
+                    <div class="topic-card" data-topic="arrays">
+                        <h3>Arrays & Hashing</h3>
+                        <p>Two pointers, sliding window, hash maps</p>
+                        <span class="problem-count">20+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="two-pointers">
+                        <h3>Two Pointers</h3>
+                        <p>Array manipulation, string processing</p>
+                        <span class="problem-count">15+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="sliding-window">
+                        <h3>Sliding Window</h3>
+                        <p>Substring problems, optimization</p>
+                        <span class="problem-count">10+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="stack">
+                        <h3>Stack</h3>
+                        <p>Parentheses, monotonic stack</p>
+                        <span class="problem-count">12+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="binary-search">
+                        <h3>Binary Search</h3>
+                        <p>Search algorithms, sorted arrays</p>
+                        <span class="problem-count">10+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="linked-list">
+                        <h3>Linked List</h3>
+                        <p>List manipulation, cycle detection</p>
+                        <span class="problem-count">8+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="trees">
+                        <h3>Trees</h3>
+                        <p>Binary trees, BST, traversals</p>
+                        <span class="problem-count">15+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="tries">
+                        <h3>Tries</h3>
+                        <p>Prefix trees, word search</p>
+                        <span class="problem-count">5+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="heap">
+                        <h3>Heap / Priority Queue</h3>
+                        <p>Top K problems, merge operations</p>
+                        <span class="problem-count">8+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="backtracking">
+                        <h3>Backtracking</h3>
+                        <p>Permutations, combinations</p>
+                        <span class="problem-count">10+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="graphs">
+                        <h3>Graphs</h3>
+                        <p>DFS, BFS, topological sort</p>
+                        <span class="problem-count">12+ problems</span>
+                    </div>
+                    <div class="topic-card" data-topic="dp">
+                        <h3>Dynamic Programming</h3>
+                        <p>1D DP, 2D DP, optimization</p>
+                        <span class="problem-count">25+ problems</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problems" class="problems">
+            <div class="container">
+                <h2 class="section-title">Problems by Category</h2>
+                
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search problems..." class="search-input">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="easy">Easy</button>
+                        <button class="filter-btn" data-filter="medium">Medium</button>
+                        <button class="filter-btn" data-filter="hard">Hard</button>
+                    </div>
+                </div>
+
+                <!-- Binary Search Section -->
+                <div class="topic-section" id="binary-search-section">
+                    <h3 class="topic-title">
+                        <span class="topic-icon">🔍</span>
+                        Binary Search
+                    </h3>
+                    <div class="problems-list">
+                        <!-- Search in Rotated Sorted Array -->
+                        <div class="problem-card medium" data-category="binary-search">
+                            <div class="problem-header">
+                                <h4>Search in Rotated Sorted Array</h4>
+                                <span class="difficulty medium">Medium</span>
+                            </div>
+                            <div class="problem-content">
+                                <p class="problem-description">
+                                    There is an integer array nums sorted in ascending order (with distinct values). 
+                                    The array is rotated at some pivot unknown to you beforehand.
+                                </p>
+                                <div class="example">
+                                    <strong>Example:</strong>
+                                    <code>Input: nums = [4,5,6,7,0,1,2], target = 0<br>Output: 4</code>
+                                </div>
+                                <div class="approach">
+                                    <strong>Approach:</strong> Use modified binary search. At each step, determine which half is sorted, then check if target lies in that half.
+                                </div>
+                                <div class="complexity">
+                                    <span><strong>Time:</strong> O(log n)</span>
+                                    <span><strong>Space:</strong> O(1)</span>
+                                </div>
+                                <details class="solution-details">
+                                    <summary>View Solution</summary>
+                                    <pre><code class="language-java">class Solution {
+    public int search(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            
+            if (nums[mid] == target) {
+                return mid;
+            }
+            
+            // Determine which side is sorted
+            if (nums[left] <= nums[mid]) {
+                // Left side is sorted
+                if (nums[left] <= target && target < nums[mid]) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            } else {
+                // Right side is sorted
+                if (nums[mid] < target && target <= nums[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
+        
+        return -1;
+    }
+}</code></pre>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Heap Section -->
+                <div class="topic-section" id="heap-section">
+                    <h3 class="topic-title">
+                        <span class="topic-icon">🏔️</span>
+                        Heap / Priority Queue
+                    </h3>
+                    <div class="problems-list">
+                        <!-- Kth Largest Element in Array -->
+                        <div class="problem-card medium" data-category="heap">
+                            <div class="problem-header">
+                                <h4>Kth Largest Element in Array</h4>
+                                <span class="difficulty medium">Medium</span>
+                            </div>
+                            <div class="problem-content">
+                                <p class="problem-description">
+                                    Given an integer array nums and an integer k, return the kth largest element in the array.
+                                </p>
+                                <div class="example">
+                                    <strong>Example:</strong>
+                                    <code>Input: nums = [3,2,1,5,6,4], k = 2<br>Output: 5</code>
+                                </div>
+                                <div class="approach">
+                                    <strong>Approach:</strong> Use a min heap of size k. Keep only the k largest elements in the heap.
+                                </div>
+                                <div class="complexity">
+                                    <span><strong>Time:</strong> O(n log k)</span>
+                                    <span><strong>Space:</strong> O(k)</span>
+                                </div>
+                                <details class="solution-details">
+                                    <summary>View Solution</summary>
+                                    <pre><code class="language-java">class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        
+        for (int num : nums) {
+            minHeap.offer(num);
+            if (minHeap.size() > k) {
+                minHeap.poll();
+            }
+        }
+        
+        return minHeap.peek();
+    }
+}</code></pre>
+                                </details>
+                            </div>
+                        </div>
+
+                        <!-- IPO -->
+                        <div class="problem-card hard" data-category="heap">
+                            <div class="problem-header">
+                                <h4>IPO</h4>
+                                <span class="difficulty hard">Hard</span>
+                            </div>
+                            <div class="problem-content">
+                                <p class="problem-description">
+                                    LeetCode wants to work on projects to increase capital before IPO. Given arrays of profits and capital requirements, maximize final capital.
+                                </p>
+                                <div class="example">
+                                    <strong>Example:</strong>
+                                    <code>Input: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]<br>Output: 4</code>
+                                </div>
+                                <div class="approach">
+                                    <strong>Approach:</strong> Use two heaps: min heap for projects by capital, max heap for available projects by profit.
+                                </div>
+                                <div class="complexity">
+                                    <span><strong>Time:</strong> O(n log n + k log n)</span>
+                                    <span><strong>Space:</strong> O(n)</span>
+                                </div>
+                                <details class="solution-details">
+                                    <summary>View Solution</summary>
+                                    <pre><code class="language-java">class Solution {
+    public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {
+        PriorityQueue<int[]> minCapitalHeap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        PriorityQueue<Integer> maxProfitHeap = new PriorityQueue<>(Collections.reverseOrder());
+        
+        for (int i = 0; i < profits.length; i++) {
+            minCapitalHeap.offer(new int[]{capital[i], profits[i]});
+        }
+        
+        for (int i = 0; i < k; i++) {
+            while (!minCapitalHeap.isEmpty() && minCapitalHeap.peek()[0] <= w) {
+                maxProfitHeap.offer(minCapitalHeap.poll()[1]);
+            }
+            
+            if (maxProfitHeap.isEmpty()) break;
+            
+            w += maxProfitHeap.poll();
+        }
+        
+        return w;
+    }
+}</code></pre>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Programming Section -->
+                <div class="topic-section" id="dp-section">
+                    <h3 class="topic-title">
+                        <span class="topic-icon">📈</span>
+                        Dynamic Programming
+                    </h3>
+                    <div class="problems-list">
+                        <!-- Climbing Stairs -->
+                        <div class="problem-card easy" data-category="dp">
+                            <div class="problem-header">
+                                <h4>Climbing Stairs</h4>
+                                <span class="difficulty easy">Easy</span>
+                            </div>
+                            <div class="problem-content">
+                                <p class="problem-description">
+                                    You are climbing a staircase. It takes n steps to reach the top. Each time you can climb 1 or 2 steps.
+                                </p>
+                                <div class="example">
+                                    <strong>Example:</strong>
+                                    <code>Input: n = 2<br>Output: 2</code>
+                                </div>
+                                <div class="approach">
+                                    <strong>Approach:</strong> This is a Fibonacci sequence. To reach step n, we can come from step (n-1) or step (n-2).
+                                </div>
+                                <div class="complexity">
+                                    <span><strong>Time:</strong> O(n)</span>
+                                    <span><strong>Space:</strong> O(1)</span>
+                                </div>
+                                <details class="solution-details">
+                                    <summary>View Solution</summary>
+                                    <pre><code class="language-java">class Solution {
+    public int climbStairs(int n) {
+        if (n <= 2) return n;
+        
+        int prev2 = 1; // dp[0]
+        int prev1 = 2; // dp[1]
+        
+        for (int i = 3; i <= n; i++) {
+            int current = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = current;
+        }
+        
+        return prev1;
+    }
+}</code></pre>
+                                </details>
+                            </div>
+                        </div>
+
+                        <!-- House Robber -->
+                        <div class="problem-card medium" data-category="dp">
+                            <div class="problem-header">
+                                <h4>House Robber</h4>
+                                <span class="difficulty medium">Medium</span>
+                            </div>
+                            <div class="problem-content">
+                                <p class="problem-description">
+                                    You are a robber planning to rob houses along a street. Adjacent houses have security systems connected.
+                                </p>
+                                <div class="example">
+                                    <strong>Example:</strong>
+                                    <code>Input: nums = [1,2,3,1]<br>Output: 4</code>
+                                </div>
+                                <div class="approach">
+                                    <strong>Approach:</strong> At each house, decide whether to rob it or not. Use DP: dp[i] = max(dp[i-1], dp[i-2] + nums[i]).
+                                </div>
+                                <div class="complexity">
+                                    <span><strong>Time:</strong> O(n)</span>
+                                    <span><strong>Space:</strong> O(1)</span>
+                                </div>
+                                <details class="solution-details">
+                                    <summary>View Solution</summary>
+                                    <pre><code class="language-java">class Solution {
+    public int rob(int[] nums) {
+        int rob = 0, notRob = 0;
+        
+        for (int num : nums) {
+            int temp = rob;
+            rob = Math.max(rob, notRob + num);
+            notRob = temp;
+        }
+        
+        return rob;
+    }
+}</code></pre>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button id="loadMoreBtn" class="btn btn-primary">Load More Problems</button>
+                    <p class="load-more-text">Showing 6 of 150+ problems</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About This Guide</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>This comprehensive guide covers the most important LeetCode problems that frequently appear in technical interviews at top tech companies. Each problem includes:</p>
+                        <ul>
+                            <li>✅ Clear problem statement and examples</li>
+                            <li>✅ Multiple solution approaches</li>
+                            <li>✅ Time and space complexity analysis</li>
+                            <li>✅ Optimized Java implementations</li>
+                            <li>✅ Detailed explanations and insights</li>
+                        </ul>
+                        <p>Whether you're preparing for FAANG interviews or looking to strengthen your algorithmic thinking, this guide provides a structured path to mastery.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-value">150+</span>
+                            <span class="stat-desc">Curated Problems</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">15</span>
+                            <span class="stat-desc">Topic Categories</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-desc">Java Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LeetCode Top 150</h4>
+                    <p>Your complete interview preparation guide</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#topics">Topics</a></li>
+                        <li><a href="#problems">Problems</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a></li>
+                        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LeetCode Top 150 Guide. Made with ❤️ for interview preparation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="problems-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
